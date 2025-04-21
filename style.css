@@ -1,0 +1,149 @@
+/* Genel Sayfa */
+body {
+    background-color: #1c1c1c;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar */
+nav {
+    background-color: #333;
+    width: 30%;
+    max-width: 1100px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav h1 {
+    font-size: 28px;
+  }
+
+/* Calculator */
+#calculator {
+    margin-top: 250px;
+    background-color: #2d2d2d;
+    border-radius: 20px;
+    padding: 20px;
+    width: 310px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 330px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 32px;
+    text-align: right;
+    padding: 3px;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 60px;
+    font-size: 22px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.4);
+    /* Yeni: iç gölge */
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.1),
+        inset 0 -3px 6px rgba(0, 0, 0, 0.6);
+    /* Daha güçlü iç gölge */
+}
+
+
+
+button.number {
+    background-color: #505050;
+    color: white;
+}
+
+button.function {
+    background-color: #a5a5a5;
+    color: black;
+}
+
+button.operator {
+    background-color: #ff9500;
+    color: white;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button.zero {
+    grid-column: span 2;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+@media (max-width: 480px) {
+    nav {
+      padding: 15px;
+    }
+  
+    nav h1 {
+      font-size: 22px;
+    }
+  
+    nav p {
+      font-size: 12px;
+    }
+  
+    #calculator {
+      margin-top: 180px;
+      padding: 15px;
+    }
+  
+    button {
+      height: 55px;
+      font-size: 20px;
+    }
+  
+    button.zero {
+      border-radius: 25px;
+    }
+  
+    #display {
+      height: 50px;
+      font-size: 26px;
+    }
+  }
+  
+  body, button {
+    touch-action: manipulation;
+  }
+  
